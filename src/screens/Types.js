@@ -3,7 +3,18 @@ import { StyleSheet, View, Text, ScrollView, TouchableHighlight } from 'react-na
 import Row from '../components/Row';
 
 class Types extends React.Component {
-
+  static navigatorStyle = {
+    drawUnderNavBar: true,
+    drawUnderTabBar: true,
+    navBarTranslucent: false,
+    navBarHidden: false,
+    tabBarHidden: false,
+    statusBarHideWithNavBar: false,
+    statusBarHidden: false,
+    navBarBlur:false,
+    statusBarColor: '#000FFF',
+    navBarHideOnScroll: false
+  };
     toggleDrawer = () => {
         this.props.navigator.toggleDrawer({
             side: 'left',

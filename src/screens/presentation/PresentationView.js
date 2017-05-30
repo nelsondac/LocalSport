@@ -33,8 +33,8 @@ var StatusBarAndroid = require('react-native-android-statusbar');
 class Presentation extends Component {
   static componentName = 'Presentation';
   static navigatorStyle = {
-    drawUnderNavBar: true,
-    drawUnderTabBar: true,
+    drawUnderNavBar: false,
+    drawUnderTabBar: false,
     navBarTranslucent: true,
     navBarHidden: true,
     tabBarHidden: true,
@@ -53,7 +53,7 @@ class Presentation extends Component {
   }
   constructor(props) {
       super(props);
-      StatusBar.setHidden(false, true);
+      //StatusBar.setHidden(false, true);
       //StatusBarAndroid.hideStatusBar();
       //this.props.navigator.toggleNavBar('hidden');
 

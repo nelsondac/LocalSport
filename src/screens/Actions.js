@@ -4,10 +4,20 @@ import {StyleSheet, ScrollView} from 'react-native';
 import Row from '../components/Row';
 
 class Actions extends React.Component {
-  static navigatorStyle = {
-    drawUnderNavBar: true,
-    navBarTranslucent: true
-  };
+
+    static navigatorStyle = {
+      drawUnderNavBar: false,
+      drawUnderTabBar: false,
+      navBarTranslucent: false,
+      navBarHidden: false,
+      tabBarHidden: false,
+      statusBarHideWithNavBar: false,
+      statusBarHidden: false,
+      navBarBlur:false,
+      statusBarColor: '#000FFF',
+      navBarHideOnScroll: false
+    };
+
     constructor(props) {
         super(props);
 
@@ -17,11 +27,7 @@ class Actions extends React.Component {
         this._toggleTabs = 'shown';
         this._toggleNavBar = 'shown';
         this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent.bind(this));
-      const to =  'hidden';
-        this.props.navigator.toggleNavBar({
-            to,
-            animated: true,
-        });
+
 
     }
 
